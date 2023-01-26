@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="60">
+    <link rel="shortuct icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>Vrhni.chan</title>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap');
+
+        :root {
+            color-scheme: dark;
+            scroll-behavior: smooth;
+        }
+
+        html {
+            height: -webkit-fill-available;
+        }
+
+        body {
+            background-color: rgb(33, 33, 33);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            height: -webkit-fill-available;
+        }
+
+        .f_text {
+            background: linear-gradient(to left, rgb(33, 33, 33),#fd1d1d, #fd1d1d, rgb(33, 33, 33));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Chivo Mono';
+            font-size: 7em;
+            margin-top: 10;
+            margin: 0;
+            text-align: center;
+        }
+
+        .text_main {
+            font-family: 'Roboto Mono', monospace;
+            margin-top: 50px;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-bottom: 20px;
+            font-size: 25px;
+            color: #c0c0c0;
+            text-align: center;
+        }
+
+        .centered {
+            background-color:rgb(25, 25, 25);
+            border-radius: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .button {
+            background: #cc0000;
+            border: 1px solid #cc0000;
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+            box-sizing: border-box;
+            color: #c0c0c0;
+            cursor: pointer;
+            display: inline-block;
+            font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+            font-size: 16px;
+            font-weight: 800;
+            line-height: 16px;
+            min-height: 40px;
+            outline: 0;
+            padding: 12px 14px;
+            text-align: center;
+            text-rendering: geometricprecision;
+            text-transform: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: middle;
+            margin-bottom: 50px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        
+        .button:hover,
+        .button:active {
+            background-color: initial;
+            background-position: 0 0;
+            color: #cc0000;
+        }
+        
+        .button:active {
+            opacity: .5;
+        }
+
+        hr {
+            height: 2px;
+            background: linear-gradient(to left, rgb(33, 33, 33), #fd1d1d, #fd1d1d, #fd1d1d, rgb(33, 33, 33));
+            border: none;
+        }
+      
+
+        @media only screen and (max-width: 600px) {
+            .f_text{
+                font-size: 3em;
+            }
+
+            .text_main {
+                font-size: 1em;
+                margin-top: 40px;
+                margin-left: 40px;
+                margin-right: 40px;
+                margin-bottom: 10px;
+            }
+
+            .centered {
+                width: 90%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        @media only screen and (max-width: 1024px) {
+            .f_text{
+                font-size: 3em;
+            }
+
+            .text_main {
+                font-size: 1em;
+                margin-top: 40px;
+                margin-left: 40px;
+                margin-right: 40px;
+                margin-bottom: 10px;
+            }
+
+            .centered {
+                width: 90%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        @media only screen and (height: 700px) {
+            .f_text{
+                font-size: 3em;
+            }
+
+            .text_main {
+                font-size: 1em;
+                margin-top: 40px;
+                margin-left: 40px;
+                margin-right: 40px;
+                margin-bottom: 10px;
+            }
+
+            .centered {
+                width: 90%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+    </style>
+
+    <div>
+        <p class="f_text">Izbira avtobusne linije</p>
+        <hr>
+        <div class="centered">
+            <p class="text_main">Izberite avtobusno linijo:</p>
+            <a href="vrhnika"><button class="button">Vrhnika</button></a>
+            <a href="logatec"><button class="button">Logatec</button></a>
+        </div>
+    </div>
+</body>
+</html>
