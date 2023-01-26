@@ -1,0 +1,1 @@
+python static/app.py
