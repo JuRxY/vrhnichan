@@ -23,7 +23,7 @@
         }
 
         body {
-            background-color: rgb(33, 33, 33);
+            background-color: #23283e;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -31,7 +31,7 @@
         }
 
         .f_text {
-            background: linear-gradient(to left, rgb(33, 33, 33),#fd1d1d, #fd1d1d, rgb(33, 33, 33));
+            background: linear-gradient(to left, #23283e,#bdbddd, #bdbddd, #bdbddd, #23283e);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-family: 'Chivo Mono';
@@ -39,7 +39,9 @@
             margin-top: 10;
             margin: 0;
             text-align: center;
+            text-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
         }
+
 
         .text_main {
             font-family: 'Roboto Mono', monospace;
@@ -48,27 +50,28 @@
             margin-right: 50px;
             margin-bottom: 20px;
             font-size: 25px;
-            color: #c0c0c0;
+            color: #bdbddd;
             text-align: center;
         }
 
         .centered {
-            background-color:rgb(25, 25, 25);
+            background-color:#2a2f4c;
             border-radius: 20px;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
         }
 
         .button {
-            background: #cc0000;
-            border: 1px solid #cc0000;
+            background: #3b4470;
+            border: 1px solid rgb(35, 40, 62);
             border-radius: 6px;
-            box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+            box-shadow: rgba(0, 0, 0, 0.26) 0px 10px 36px 0px, rgba(0, 0, 0, 0.16) 0px 0px 0px 1px;
             box-sizing: border-box;
-            color: #c0c0c0;
+            color: #bdbddd;
             cursor: pointer;
             display: inline-block;
             font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
@@ -80,7 +83,6 @@
             padding: 12px 14px;
             text-align: center;
             text-rendering: geometricprecision;
-            text-transform: none;
             user-select: none;
             -webkit-user-select: none;
             touch-action: manipulation;
@@ -88,25 +90,54 @@
             margin-bottom: 50px;
             margin-left: 20px;
             margin-right: 20px;
+            transition: transform 0.2s ease-in-out;
         }
-        
+
         .button:hover,
-        .button:active {
+        .button:focus {
             background-color: initial;
             background-position: 0 0;
-            color: #cc0000;
+            transform: translateY(-0.25em);
+            color: #7d91f7;
         }
         
         .button:active {
             opacity: .5;
+            color: #7d91f7;
+            background-color: initial;
+            background-position: 0 0;
         }
 
         hr {
             height: 2px;
-            background: linear-gradient(to left, rgb(33, 33, 33), #fd1d1d, #fd1d1d, #fd1d1d, rgb(33, 33, 33));
+            background: linear-gradient(to left, #23283e, #90a0d9, #90a0d9, #90a0d9, #23283e);
             border: none;
         }
-      
+
+        .copiright_notice {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: auto;
+            text-align:right;
+            margin-right: 20px;
+            margin-bottom: 0px;
+            font-size: 15px;
+            font-family: 'Roboto Mono', monospace;
+            text-decoration: none;
+        }
+
+        a {
+            text-decoration: none;
+            cursor:pointer;
+            color: #303654;
+            text-shadow: #181c2a 1px 1px 10px;
+        }
+
+        .copyright_text {
+            color: #303654;
+        }
+        
 
         @media only screen and (max-width: 600px) {
             .f_text{
@@ -139,6 +170,11 @@
                 margin-right: 40px;
                 margin-bottom: 10px;
             }
+          
+            .button {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
 
             .centered {
                 width: 90%;
@@ -159,9 +195,25 @@
                 margin-bottom: 10px;
             }
 
+            .button {
+                margin-left: 3px;
+                margin-right: 3px;
+            }
+
             .centered {
                 width: 90%;
                 transform: translate(-50%, -50%);
+            }
+
+            a {
+            text-decoration: none;
+            cursor:pointer;
+            color: #292f49;
+            text-shadow: #181c2a 1px 1px 10px;
+            }
+
+            .copyright_text {
+                color: #292f49;
             }
         }
 
@@ -173,7 +225,16 @@
         <div class="centered">
             <p class="text_main">Izberite avtobusno linijo:</p>
             <a href="vrhnika"><button class="button">Vrhnika</button></a>
+            <a href="lesno_brdo"><button class="button">Lesno brdo</button></a>
             <a href="logatec"><button class="button">Logatec</button></a>
+        </div>
+        <div class="copiright_notice">
+            <p class="copyright_text">
+                <a href="https://github.com/JuRxY/vrhnichan">GitHub</a><br>
+                Branch: main<br>
+                Built on: 2022-2-9T21:08:39+00:00<br>
+                All rights reserved
+            </p>
         </div>
     </div>
 </body>
