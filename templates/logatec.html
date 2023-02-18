@@ -61,6 +61,11 @@
             left: 50%;
             transform: translate(-50%, -90%);
             box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .centered:hover {
+            transform: translate(-50%, -93%);
         }
 
         .centered2 {
@@ -72,6 +77,11 @@
             transform: translate(-50%, 30%);
             margin-bottom: 100px;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .centered2:hover {
+            transform: translate(-50%, 27%);
         }
 
         hr {
@@ -122,9 +132,17 @@
                 transform: translate(-50%, -80%);
             }
 
+            .centered:hover {
+                transform: translate(-50%, -80%);
+            }
+
             .centered2 {
                 width: 90%;
                 margin-bottom: 100px;
+            }
+
+            .centered2:hover {
+                transform: translate(-50%, 30%);
             }
         }
 
@@ -146,15 +164,23 @@
                 transform: translate(-50%, -80%);
             }
 
+            .centered:hover {
+                transform: translate(-50%, -80%);
+            }
+
             .centered2 {
                 width: 90%;
+            }
+
+            .centered2:hover {
+                transform: translate(-50%, 30%);
             }
         }
 
     </style>
 
     <div>
-        <p class="f_text">Prihodi linije {{ hkey }}: </p>
+        <p class="f_text">Logatec</p>
         <hr>
         <div class="centered">
                 <p class="text_main">Ura naslednjega odhoda: {{ htime }}</p>
